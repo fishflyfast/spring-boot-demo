@@ -26,8 +26,15 @@ public class PropertyController {
         this.developerProperty = developerProperty;
     }
 
+    @Autowired
+    private ApplicationProperty applicationProperty1;
+    
+    @Autowired
+    private DeveloperProperty developerProperty1;
+    
     @GetMapping("/property")
     public Dict index() {
-        return Dict.create().set("applicationProperty", applicationProperty).set("developerProperty", developerProperty);
+        Dict dict =  Dict.create().set("applicationProperty", applicationProperty1).set("developerProperty", developerProperty1);
+        return dict;
     }
 }

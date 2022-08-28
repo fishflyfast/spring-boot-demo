@@ -1,5 +1,8 @@
 package com.xkcoding.helloworld.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,5 +24,15 @@ public class HelloWorldController {
             who = "World";
         }
         return StrUtil.format("Hello, {}!", who);
+    }
+    /**
+     *  返回map
+     * @return
+     */
+    @GetMapping("/hello1")
+    public Map<String, String> helloMap() {
+    	Map<String, String> result = new HashMap();
+    	result.put("result", "this is a map");
+    	return result;
     }
 }

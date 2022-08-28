@@ -1,3 +1,10 @@
+/**
+ * 读取配置文件。
+ * 
+ * 2022.8.28测试
+ * 有问题，读取到的DeveloperProperty中的属性为空，且用URL访问后，返回值为：
+ * {"applicationProperty":{},"developerProperty":{}}
+ */
 package com.xkcoding.properties;
 
 import org.springframework.boot.SpringApplication;
